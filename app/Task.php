@@ -12,4 +12,12 @@ class Task extends Model
    * @var array
    */
   protected $fillable = ['name'];
+  
+  /**
+   * Получить пользователя - владельца данной задачи
+   */
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
 }
